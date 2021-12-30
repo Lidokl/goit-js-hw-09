@@ -5,7 +5,26 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 
 
+const refs = {
+    input: document.querySelector('.datetime-picker'),
+    button: document.querySelector('.data-start') ,
+    days: document.querySelector('.data-days'),
+    hours: document.querySelector('.data-hours'),
+    minutes: document.querySelector('.data-minutes'),
+    seconds: document.querySelector('.data-seconds')
 
+};
+
+// refs.button.addEventListener();
+const options = {
+    enableTime: true,
+    time_24hr: true,
+    defaultDate: new Date(),
+    minuteIncrement: 1,
+    onClose(selectedDates) {
+      console.log(selectedDates[0]);
+    },
+  };
 function convertMs(ms) {
     // Number of milliseconds per unit of time
     const second = 1000;
