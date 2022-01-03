@@ -56,15 +56,18 @@ const options = {
       let nowDate = Date.now();
       timeLeft = choseDate - nowDate;
        updateClockFase(convertMs(timeLeft));
-      console.log(timeLeft);
+      // console.log(timeLeft);
       if (timeLeft < time) {
         clearInterval(timerId);
       }
-    }, 1000);
-  }
 
-function addLeadingZero(value) {
-  return String(value).padStart(2, '0');}
+      function addLeadingZero(value) {
+        return String(value).padStart(2, '0');}
+
+   
+  
+
+
 
 
 function convertMs(ms) {
@@ -86,12 +89,15 @@ function convertMs(ms) {
     return { days, hours, minutes, seconds };
   }
   
-  console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-  console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-  console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
-  
+  // console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
+  // console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
+  // console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 
-  // function welcomToNotiflix() {
-  //   console.log('Please choose a date in the future')
-  // }
+  function updateClockFase({ days, hours, minutes, seconds }) {
+    refs.days.innerHTML = `${days}`;
+    refs.hours.innerHTML = `${hours}`;
+    refs.minutes.innerHTML = `${minutes}`;
+    refs.seconds.innerHTML = `${seconds}`;
   
+  Notiflix.Notify.success()
+  }})}
