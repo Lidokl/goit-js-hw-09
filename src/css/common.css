@@ -16,3 +16,26 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+
+.field {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 10px 10px;
+  padding: 10px;
+  }
+  
+  .value {
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .label {
+    font-size: 20px;
+    color: black;
+  }
+  
+  button, input {
+    font-size: 20px;
+  }

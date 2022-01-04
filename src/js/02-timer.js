@@ -28,6 +28,7 @@ const refs = {
     minuteIncrement: 1,
   
     onClose(selectedDates) {
+        
       choseDate = selectedDates[0];
       let isNotValidDate = choseDate < options.defaultDate;
       if (isNotValidDate) {
@@ -42,6 +43,7 @@ const refs = {
   refs.startBtn.addEventListener('click', startClock);
   // =======================================================================
   function startClock() {
+      
     refs.startBtn.removeEventListener('click', startClock);
     timerId = setInterval(() => {
       let nowDate = Date.now();
@@ -52,6 +54,7 @@ const refs = {
         clearInterval(timerId);
       }
     }, 1000);
+    Notiflix.Notify.success();
   }
   // =======================================================================
   function addLeadingZero(value) {
