@@ -5,6 +5,6 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"opPG":[function(require,module,exports) {
 
 },{}],"GyVV":[function(require,module,exports) {
-"use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}require("notiflix/dist/notiflix-3.2.2.min.css");const i={form:document.querySelector("form"),inputs:document.querySelectorAll("input")};function o(t){t.preventDefault(),n(position,delay).then(({position:t,delay:i})=>{e.default.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`)}).catch(({position:t,delay:i})=>{e.default.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`)})}function n(e,t){const i=Math.random()>.3;i?i({position:e,delay:t}):reject({position:e,delay:t})}i.form.addEventListener("submit",o);let l=new Date,s=new Date(2022,0,1,0,0,1);l.valueOf()===s.valueOf()&&console.log("Happy New Year!!!");
+"use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}require("notiflix/dist/notiflix-3.2.2.min.css");const n={form:document.querySelector("form"),inputs:document.querySelectorAll("input")};let u=[],i=null,r=0;function l(t,n){Math.random()>.3?e.default.Notify.success(`✅ Fulfilled promise ${t} in ${n}ms`):e.default.Notify.failure(`❌ Rejected promise ${t} in ${n}ms`)}function o(e){e.preventDefault(),n.inputs.forEach(s);let[t,o,f]=u;i=setInterval(()=>{f<=(r+=1)&&clearInterval(i),l(r,t),t+=o,console.log(r)},t)}function s(e){return u.push(Number(e.value))}n.form.addEventListener("submit",o);
 },{"notiflix":"hWOm","notiflix/dist/notiflix-3.2.2.min.css":"opPG"}]},{},["GyVV"], null)
-//# sourceMappingURL=/goit-js-hw-09/03-promises.3c77f197.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.14173c66.js.map
