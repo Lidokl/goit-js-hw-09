@@ -7,4 +7,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}require("notiflix/dist/notiflix-3.2.2.min.css");const i={form:document.querySelector("form"),inputs:document.querySelectorAll("input")};function o(t){t.preventDefault(),n(position,delay).then(({position:t,delay:i})=>{e.default.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`)}).catch(({position:t,delay:i})=>{e.default.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`)})}function n(e,t){const i=Math.random()>.3;i?i({position:e,delay:t}):reject({position:e,delay:t})}i.form.addEventListener("submit",o);let l=new Date,s=new Date(2022,0,1,0,0,1);l.valueOf()===s.valueOf()&&console.log("Happy New Year!!!");
 },{"notiflix":"hWOm","notiflix/dist/notiflix-3.2.2.min.css":"opPG"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.3c77f197.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.3c77f197.js.map
